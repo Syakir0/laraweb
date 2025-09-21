@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Admin\LoginController;
-use App\Http\Controllers\Api\Admin\UserController; // ⬅️ controller untuk CRUD user
+use App\Http\Controllers\Api\Admin\UserController;
+use App\Http\Controllers\Api\Admin\MahasiswaController;
 
 // =========================
 // ADMIN AUTH (JWT)
@@ -17,7 +18,11 @@ Route::prefix('admin')->group(function () {
         Route::get('/refresh', [LoginController::class, 'refreshToken']);
         Route::post('/logout', [LoginController::class, 'logout']);
 
-        // 🔥 Semua CRUD User (GET, POST, PUT, DELETE) otomatis tersedia
+        // CRUD User
         Route::apiResource('users', UserController::class);
+
+        // CRUD Mahasiswa
+        Route::apiResource('mahasiswas', MahasiswaController::class)
+             ->except(['create', 'edit']);
     });
 });
