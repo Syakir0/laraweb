@@ -1,65 +1,284 @@
-<<<<<<< HEAD
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/gdkfk4Vn)
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏫 **LAPORAN PROYEK SISTEM INFORMASI DATA DOSEN**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**(RESTful API Berbasis Laravel 11)**
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📘 **KATA PENGANTAR**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Puji syukur kehadirat Allah SWT atas limpahan rahmat dan karunia-Nya sehingga penulis dapat menyelesaikan proyek *Sistem Informasi Data Dosen* ini tepat pada waktunya.
+Proyek ini dikembangkan menggunakan framework **Laravel 11** dengan pendekatan **RESTful API**, sebagai bentuk penerapan konsep pemrograman berbasis layanan (*service-oriented architecture*).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Aplikasi ini diharapkan dapat menjadi solusi bagi pengelolaan data dosen di lingkungan perguruan tinggi secara **efisien, terstruktur, dan mudah diintegrasikan** dengan sistem lain seperti aplikasi mobile dan sistem akademik kampus.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📑 **DAFTAR ISI**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Pendahuluan**
+2. **Rumusan Masalah dan Tujuan**
+3. **Metodologi Pengembangan**
+4. **Analisis dan Perancangan Sistem**
+5. **Implementasi Sistem**
+6. **Pengujian API**
+7. **Kesimpulan dan Saran**
+8. **Lampiran (Contoh JSON dan Hasil Postman)**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🧭 **1. PENDAHULUAN**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 1.1 Latar Belakang
 
-### Premium Partners
+Seiring dengan kemajuan teknologi informasi, kebutuhan akan sistem manajemen data akademik yang terintegrasi semakin meningkat.
+Salah satu aspek penting dalam sistem akademik adalah pengelolaan **data dosen**, yang meliputi informasi pribadi, pangkat akademik, serta bidang keahlian yang ditekuni.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Pengelolaan data secara manual menggunakan spreadsheet atau dokumen konvensional rentan terhadap kesalahan, redundansi data, dan kesulitan dalam sinkronisasi antar bagian.
+Untuk mengatasi permasalahan tersebut, dikembangkanlah aplikasi **REST API Laravel** yang menyediakan layanan terstandarisasi untuk pengelolaan data dosen.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🎯 **2. RUMUSAN MASALAH DAN TUJUAN**
 
-## Code of Conduct
+### 2.1 Rumusan Masalah
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Bagaimana membangun sistem backend yang mampu menyimpan dan mengelola data dosen secara efisien?
+2. Bagaimana menerapkan konsep *relational database* dengan relasi antar tabel (pangkat, bidang keahlian, dosen)?
+3. Bagaimana merancang API yang aman, modular, dan mudah diintegrasikan?
 
-## Security Vulnerabilities
+### 2.2 Tujuan
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Membangun **RESTful API** untuk manajemen data dosen berbasis Laravel.
+2. Mengimplementasikan fitur CRUD untuk entitas **pangkat**, **kelompok bidang keahlian**, dan **dosen**.
+3. Menyediakan dokumentasi endpoint yang mudah diuji menggunakan **Postman**.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> 28e0f72 (konfigurasi domain dan database)
+## 🧩 **3. METODOLOGI PENGEMBANGAN**
+
+Proyek ini dikembangkan menggunakan pendekatan **Model-View-Controller (MVC)** dengan tahapan sebagai berikut:
+
+| Tahap            | Deskripsi                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| **Analisis**     | Menentukan kebutuhan data dan relasi antar entitas (pangkat, bidang keahlian, dosen). |
+| **Perancangan**  | Mendesain struktur database dan arsitektur API.                                       |
+| **Implementasi** | Menggunakan Laravel 11 dan MySQL untuk pengembangan API.                              |
+| **Pengujian**    | Menggunakan Postman untuk uji endpoint dan validasi response JSON.                    |
+
+---
+
+## 🧱 **4. ANALISIS DAN PERANCANGAN SISTEM**
+
+### 4.1 Diagram Relasi (ERD)
+
+```
++-------------+          +------------------------------+
+|   Pangkats  |          | Kelompok_Bidang_Keahlians    |
+|-------------|          |------------------------------|
+| id          |          | id                           |
+| nama_pangkat|          | nama_kelompok                |
+| golongan    |          | deskripsi                    |
+| ruang       |          +------------------------------+
+| keterangan  |
++------+------+                |
+       |                        |
+       |                        |
+       |                        |
+       +----------+-------------+
+                  |
+                  v
+            +-------------+
+            |   Dosens    |
+            |-------------|
+            | id          |
+            | nip         |
+            | nama        |
+            | email       |
+            | pangkat_id  |
+            | kelompok_bidang_keahlian_id |
+            | nomor_hp    |
+            | alamat      |
+            +-------------+
+```
+
+---
+
+## ⚙️ **5. IMPLEMENTASI SISTEM**
+
+### 5.1 Teknologi yang Digunakan
+
+| Komponen          | Teknologi       |
+| ----------------- | --------------- |
+| Framework Backend | Laravel 11      |
+| Bahasa            | PHP 8.3         |
+| Database          | MySQL           |
+| Autentikasi       | JWT Token       |
+| Server            | Apache / Docker |
+| API Testing       | Postman         |
+
+### 5.2 Struktur Direktori Utama
+
+```
+app/
+ ├─ Http/
+ │   ├─ Controllers/
+ │   │   ├─ Api/
+ │   │   │   ├─ Admin/
+ │   │   │   │   ├─ PangkatController.php
+ │   │   │   │   ├─ KelompokBidangKeahlianController.php
+ │   │   │   │   └─ DosenController.php
+database/
+ ├─ migrations/
+ │   ├─ 2025_10_22_create_pangkats_table.php
+ │   ├─ 2025_10_23_create_kelompok_bidang_keahlians_table.php
+ │   ├─ 2025_10_24_create_dosens_table.php
+routes/
+ ├─ api.php
+```
+
+---
+
+## 🌐 **6. PENGUJIAN API (POSTMAN)**
+
+### 🔹 Endpoint 1 — Tambah Pangkat
+
+**URL:** `/api/admin/pangkats`
+**Method:** `POST`
+
+**Request:**
+
+```json
+{
+  "nama_pangkat": "Lektor Kepala",
+  "golongan": "IV/B",
+  "ruang": "B",
+  "keterangan": "Jabatan akademik menengah tingkat lanjut"
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Data pangkat berhasil ditambahkan",
+  "data": {
+    "id": 1,
+    "nama_pangkat": "Lektor Kepala",
+    "golongan": "IV/B",
+    "ruang": "B",
+    "keterangan": "Jabatan akademik menengah tingkat lanjut"
+  }
+}
+```
+
+---
+
+### 🔹 Endpoint 2 — Tambah Kelompok Bidang Keahlian
+
+**URL:** `/api/admin/kelompok-bidang-keahlians`
+**Method:** `POST`
+
+**Request:**
+
+```json
+{
+  "nama_kelompok": "Teknologi Rekayasa Jaringan Komputer",
+  "deskripsi": "Fokus pada pengembangan sistem jaringan, keamanan, dan infrastruktur data."
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Data kelompok bidang keahlian berhasil ditambahkan",
+  "data": {
+    "id": 1,
+    "nama_kelompok": "Teknologi Rekayasa Jaringan Komputer",
+    "deskripsi": "Fokus pada pengembangan sistem jaringan, keamanan, dan infrastruktur data."
+  }
+}
+```
+
+---
+
+### 🔹 Endpoint 3 — Tambah Dosen
+
+**URL:** `/api/admin/dosens`
+**Method:** `POST`
+
+**Request:**
+
+```json
+{
+  "nip": "1978123456001",
+  "nama": "Dr. Ahmad Syakir, S.T., M.T.",
+  "email": "syakir@univ.ac.id",
+  "pangkat_id": 1,
+  "kelompok_bidang_keahlian_id": 1,
+  "nomor_hp": "081234567890",
+  "alamat": "Jl. Pendidikan No. 12, Bandung"
+}
+```
+
+**Response:**
+
+```json
+{
+  "success": true,
+  "message": "Data dosen berhasil ditambahkan",
+  "data": {
+    "id": 1,
+    "nip": "1978123456001",
+    "nama": "Dr. Ahmad Syakir, S.T., M.T.",
+    "email": "syakir@univ.ac.id",
+    "pangkat_id": 1,
+    "kelompok_bidang_keahlian_id": 1,
+    "nomor_hp": "081234567890",
+    "alamat": "Jl. Pendidikan No. 12, Bandung"
+  }
+}
+```
+
+---
+
+## 🧠 **7. KESIMPULAN DAN SARAN**
+
+### 7.1 Kesimpulan
+
+Dari hasil pengembangan dan pengujian yang dilakukan, diperoleh bahwa sistem **RESTful API Laravel** ini:
+
+* Berhasil menyediakan layanan CRUD untuk entitas *pangkat*, *kelompok bidang keahlian*, dan *dosen*.
+* Memiliki struktur relasional yang jelas antar tabel.
+* Siap untuk diintegrasikan dengan aplikasi frontend (web maupun mobile).
+
+### 7.2 Saran
+
+1. Tambahkan **upload foto dosen** menggunakan Laravel Storage.
+2. Implementasikan **pagination & search** di setiap endpoint.
+3. Tambahkan **role-based access (admin/user)** untuk keamanan yang lebih baik.
+4. Integrasikan dengan **frontend Vue.js / Flutter** agar menjadi aplikasi utuh.
+
+---
+
+## 📎 **8. LAMPIRAN**
+
+### Contoh Struktur JSON (Gabungan Data Relasional)
+
+```json
+{
+  "nama": "Dr. Ahmad Syakir, S.T., M.T.",
+  "pangkat": {
+    "nama_pangkat": "Lektor Kepala",
+    "golongan": "IV/B"
+  },
+  "kelompok_bidang_keahlian": {
+    "nama_kelompok": "Teknologi Rekayasa Jaringan Komputer"
+  }
+}
+```
+
+---
+
