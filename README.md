@@ -123,10 +123,9 @@ app/
  ├─ Http/
  │   ├─ Controllers/
  │   │   ├─ Api/
- │   │   │   ├─ Admin/
- │   │   │   │   ├─ PangkatController.php
- │   │   │   │   ├─ KelompokBidangKeahlianController.php
- │   │   │   │   └─ DosenController.php
+ │   │   │   ├─ PangkatController.php
+ │   │   │   ├─ KelompokBidangKeahlianController.php
+ │   │   │   └─ DosenController.php
 database/
  ├─ migrations/
  │   ├─ 2025_10_22_create_pangkats_table.php
@@ -213,32 +212,48 @@ routes/
 
 ```json
 {
-  "nip": "1978123456001",
-  "nama": "Dr. Ahmad Syakir, S.T., M.T.",
-  "email": "syakir@univ.ac.id",
+  "nidn": "1234567890",
+  "nip": "198765432109876543",
+  "tmt": "2020-01-01",
+  "nama_lengkap": "Dr. Ahmad Syakir, M.Kom",
   "pangkat_id": 1,
+  "jenis_kelamin": true,
+  "foto": "https://www.gravatar.com/avatar/ahmad_sy",
   "kelompok_bidang_keahlian_id": 1,
-  "nomor_hp": "081234567890",
-  "alamat": "Jl. Pendidikan No. 12, Bandung"
+  "bidang_keilmuan": "Kecerdasan Buatan dan Machine Learning",
+  "jabatan_fungsional": "lektor kepala",
+  "status": "aktif",
+  "user_id": 1,
+  "program_studi_id": 1
 }
+
+
 ```
 
 **Response:**
 
 ```json
 {
-  "success": true,
-  "message": "Data dosen berhasil ditambahkan",
-  "data": {
-    "id": 1,
-    "nip": "1978123456001",
-    "nama": "Dr. Ahmad Syakir, S.T., M.T.",
-    "email": "syakir@univ.ac.id",
-    "pangkat_id": 1,
-    "kelompok_bidang_keahlian_id": 1,
-    "nomor_hp": "081234567890",
-    "alamat": "Jl. Pendidikan No. 12, Bandung"
-  }
+    "success": true,
+    "message": "Data dosen berhasil ditambahkan",
+    "data": {
+        "nidn": "1234567890",
+        "nip": "198765432109876543",
+        "tmt": "2020-01-01",
+        "nama_lengkap":  "Dr. Ahmad Syakir, M.Kom",
+        "pangkat_id": 1,
+        "jenis_kelamin": true,
+        "foto": "https://www.gravatar.com/avatar/ahmad_sy",
+        "kelompok_bidang_keahlian_id": 1,
+        "bidang_keilmuan": "Kecerdasan Buatan dan Machine Learning",
+        "jabatan_fungsional": "lektor kepala",
+        "status": "aktif",
+        "user_id": 1,
+        "program_studi_id": 1,
+        "updated_at": "2025-10-31T02:14:35.000000Z",
+        "created_at": "2025-10-31T02:14:35.000000Z",
+        "id": 1
+    }
 }
 ```
 
