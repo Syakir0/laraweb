@@ -1,0 +1,1194 @@
+{
+	"info": {
+		"_postman_id": "283c5494-253e-49a7-bbe0-ec41bccebd10",
+		"name": "laraweb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38307741"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"password\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc1OTQ1NjUyNCwiZXhwIjoxNzU5NDYwMTI0LCJuYmYiOjE3NTk0NTY1MjQsImp0aSI6IkxQTndqek52OHBzOUhDc2oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.qVBCwb3Opb0JewqDLGKj1S3_oowZRNti4wSUkF67U9U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://laraweb.test/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crud program studies",
+			"item": [
+				{
+					"name": "program studis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"program_studi\": \"Teknik rekayasa komputer jaringan\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/program-studis",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"program-studis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit prgram studis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"program_studi\": \"TEKNOLOGI REKAYASA JARINGAN KOMPUTER\",\r\n  \"_method\": \"PATCH\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/program-studis/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"program-studis",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view data program studies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/program-studis",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"program-studis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus program study",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/admin/program-studis/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"admin",
+								"program-studis",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MzYxMTE4NCwiZXhwIjoxNzYzNjE0Nzg0LCJuYmYiOjE3NjM2MTExODQsImp0aSI6ImNLQWk5dEpYZ3VGNVQ2Q0oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.SPPfTsh4aHyPAJgSeN395UffAzg93dHAecJTBbjvr2Y",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "crud pangkat",
+			"item": [
+				{
+					"name": "program pangkat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama_pangkat\": \"kepala jurusan\",\r\n  \"golongan\": \"IV/a\",\r\n  \"ruang\": \"A\",\r\n  \"tmt_pangkat\": \"2018-05-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/pangkats",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"pangkats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit pangkat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama_pangkat\": \"kepala jurusan edit\",\r\n  \"golongan\": \"IV/a\",\r\n  \"ruang\": \"A\",\r\n  \"tmt_pangkat\": \"2018-05-01\",\r\n  \"_method\":\"PATCH\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/pangkats/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"pangkats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lihat data pangkat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/admin/pangkats",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"admin",
+								"pangkats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus pangkat",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/pangkats/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"pangkats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MzYxMTE4NCwiZXhwIjoxNzYzNjE0Nzg0LCJuYmYiOjE3NjM2MTExODQsImp0aSI6ImNLQWk5dEpYZ3VGNVQ2Q0oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.SPPfTsh4aHyPAJgSeN395UffAzg93dHAecJTBbjvr2Y",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "crud kelompok bidang keahlian",
+			"item": [
+				{
+					"name": "kelompok bidang keahlian",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama_kelompok\": \"Teknologi Rekayasa Jaringan Komputer\",\r\n  \"deskripsi\": \"Kelompok bidang yang berfokus pada pengembangan sistem jaringan, keamanan data, dan infrastruktur komputer modern.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/kelompok-bidang-keahlians",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelompok-bidang-keahlians"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit kelompok bidang keahlian",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nama_kelompok\": \"Teknologi Rekayasa Jaringan Komputer\",\r\n  \"deskripsi\": \"Kelompok bidang yang berfokus pada pengembangan sistem jaringan, keamanan data, dan infrastruktur komputer modern.\",\r\n  \"_method\": \"PATCH\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/kelompok-bidang-keahlians/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelompok-bidang-keahlians",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view dataa kelompok bidang keahlian",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/kelompok-bidang-keahlians",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelompok-bidang-keahlians"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus kelompok bidang keahlian",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/kelompok-bidang-keahlians/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelompok-bidang-keahlians",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MzYxMTE4NCwiZXhwIjoxNzYzNjE0Nzg0LCJuYmYiOjE3NjM2MTExODQsImp0aSI6ImNLQWk5dEpYZ3VGNVQ2Q0oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.SPPfTsh4aHyPAJgSeN395UffAzg93dHAecJTBbjvr2Y",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "crud mahasiswa",
+			"item": [
+				{
+					"name": "tambah data mahasiswa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI2ODE3MSwiZXhwIjoxNzYxMjcxNzcxLCJuYmYiOjE3NjEyNjgxNzEsImp0aSI6IlNVa3c0b3k1cmpJRnFINEwiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CDNbguN224sUT-mwNmOXPeXr_Zgp74s_R1NLR2t49jQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nim\": \"2025903430011\",\r\n    \"nama\": \"Ahmad Syakir\",\r\n    \"program_studi_id\": 2,\r\n    \"email\": \"syakir@example.com\",\r\n    \"nomor_hp\": \"081234567890\",\r\n    \"jenis_kelamin\": true,\r\n    \"tempat_lahir\": \"takengon\",\r\n    \"tanggal_lahir\": \"2003-09-15\",\r\n    \"golongan_darah\": \"A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/mahasiswas",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"mahasiswas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data mahasiswa",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI2ODE3MSwiZXhwIjoxNzYxMjcxNzcxLCJuYmYiOjE3NjEyNjgxNzEsImp0aSI6IlNVa3c0b3k1cmpJRnFINEwiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CDNbguN224sUT-mwNmOXPeXr_Zgp74s_R1NLR2t49jQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_method\": \"PATCH\",\r\n    \"nim\": \"2025903430011\",\r\n    \"nama\": \"Ahmad Syakir update\",\r\n    \"program_studi_id\": 2,\r\n    \"email\": \"syakir@example.com\",\r\n    \"nomor_hp\": \"081234567890\",\r\n    \"jenis_kelamin\": true,\r\n    \"tempat_lahir\": \"Takengon\",\r\n    \"tanggal_lahir\": \"2003-09-15\",\r\n    \"golongan_darah\": \"A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/mahasiswas/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"mahasiswas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view data mahasiswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/admin/mahasiswas",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"admin",
+								"mahasiswas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus data mahasiswa",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MDA2NjIwOSwiZXhwIjoxNzYwMDY5ODA5LCJuYmYiOjE3NjAwNjYyMDksImp0aSI6Ik5iZFRsNmFFNmVRaEhqdjQiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.COH59GrCoplvxqvR9dH4Hq_lcBy7IRYS_Ax8musQmG0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://laraweb.test/api/mahasiswas/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"mahasiswas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MzYxMTE4NCwiZXhwIjoxNzYzNjE0Nzg0LCJuYmYiOjE3NjM2MTExODQsImp0aSI6ImNLQWk5dEpYZ3VGNVQ2Q0oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.SPPfTsh4aHyPAJgSeN395UffAzg93dHAecJTBbjvr2Y",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "crud dosen",
+			"item": [
+				{
+					"name": "dosen",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nidn\": \"1234567890\",\r\n  \"nip\": \"198765432109876543\",\r\n  \"tmt\": \"2020-01-01\",\r\n  \"nama_lengkap\": \"Dr. Ahmad Syakir, M.Kom\",\r\n  \"pangkat_id\": 1,\r\n  \"jenis_kelamin\": true,\r\n  \"foto\": \"https://www.gravatar.com/avatar/ahmad_sy\",\r\n  \"kelompok_bidang_keahlian_id\": 1,\r\n  \"bidang_keilmuan\": \"Kecerdasan Buatan dan Machine Learning\",\r\n  \"jabatan_fungsional\": \"lektor kepala\",\r\n  \"status\": \"aktif\",\r\n  \"user_id\": 1,\r\n  \"program_studi_id\": 1\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/dosens",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"dosens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data dosen",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nidn\": \"1234567890\",\r\n  \"nip\": \"198765432109876543\",\r\n  \"tmt\": \"2020-01-01\",\r\n  \"nama_lengkap\": \"Dr. Ahmad Syakir, M.Kom edit \",\r\n  \"pangkat_id\": 1,\r\n  \"jenis_kelamin\": true,\r\n  \"foto\": \"https://www.gravatar.com/avatar/ahmad_sy\",\r\n  \"kelompok_bidang_keahlian_id\": 1,\r\n  \"bidang_keilmuan\": \"Kecerdasan Buatan dan Machine Learning\",\r\n  \"jabatan_fungsional\": \"lektor kepala\",\r\n  \"status\": \"aktif\",\r\n  \"user_id\": 1,\r\n  \"program_studi_id\": 1,\r\n  \"_method\":\"PATCH\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/dosens/1",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"dosens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view data dosens",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nama\": \"Faiza Zulaikha\",\r\n  \"nim\": \"2020\",\r\n  \"prodi_id\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://laraweb.test/api/dosens",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"dosens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hapus data dosens",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJ0eXAiOiJKV1QiLCJeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MTI3ODYwMywiZXhwIjoxNzYxMjgyMjAzLCJuYmYiOjE3NjEyNzg2MDMsImp0aSI6IjlqS2ZEVWRHNE5ncWlQbGsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0tDkGoyRSXlv5w3CukzhF2oMrnKsign78LtWZGDLX_4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://laraweb.test/api/dosens",
+							"protocol": "http",
+							"host": [
+								"laraweb",
+								"test"
+							],
+							"path": [
+								"api",
+								"dosens"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbGFyYXdlYi50ZXN0L2FwaS9hZG1pbi9sb2dpbiIsImlhdCI6MTc2MzYxMTE4NCwiZXhwIjoxNzYzNjE0Nzg0LCJuYmYiOjE3NjM2MTExODQsImp0aSI6ImNLQWk5dEpYZ3VGNVQ2Q0oiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.SPPfTsh4aHyPAJgSeN395UffAzg93dHAecJTBbjvr2Y",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
